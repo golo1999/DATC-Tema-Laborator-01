@@ -1,0 +1,21 @@
+Dezvoltați și publicați pe Azure o aplicație de tip Web API pentru monitorizarea studenților (sumar) dintr-o univeristate.
+
+IMPORTANT! Pentru a face 'submit' la temă, va fi necesar să încărcați aplicația în repository-ul de GitHub deja creat și să puneți la rezolvare linkul către folderul unde se găsește tema 2 în repository.
+
+IMPORTANT! De asemenea, dacă publicați aplicația pe Azure este necesar să puneți și URL-ul aplicației, care să conțină și numele vostru. De exemplu, https://{numelevostru}-datc2020-l2.azurewebsites.net
+
+Clasa Student.cs reprezintă modelul unui student, și trebuie să conțină anumite proprietăți despre student. Proprietăți minime recomandate: Id (obligatoriu), Nume, Prenume, Facultate, An de studiu, etc.
+
+Clasa StudentRepo.cs reprezintă o simulare a unei baze de date pentru stocarea informațiilor despre studenți. Poate să fie formată dintr-o listă statică de studenți.
+
+Pentru transmiterea datelor catre metodele controllerului:
+
+la GET si DELETE se va folosi prin URL parameter, de ex.: /students/3
+la POST si PUT se va trimite obiect JSON prin body
+
+Criterii de notare
+Punctaj	Cerință
+5p	Creați aplicația (rulați dotnet new webapi)
+2p	Creați clasele Student.cs și StudentRepo.cs
+4 x 0.5p	Creați controllerul Students și implementați metode pentru toate operațiunile CRUD
+1p	 Publicați aplicația pe Azure
