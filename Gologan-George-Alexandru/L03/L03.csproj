@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="2.2.0" />
     <PackageReference Include="Google.Apis.Drive.v3" Version="1.55.0.2481" />
     <PackageReference Include="Microsoft.AspNet.WebApi.SelfHost" Version="5.2.2" />
   </ItemGroup>

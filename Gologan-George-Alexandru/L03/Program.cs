@@ -25,9 +25,11 @@ namespace L03
                 DriveService.Scope.DriveFile
             };
 
-            var clientId = "368704081848-4s2noko9tt63ter8jdckn1spe8f67f93.apps.googleusercontent.com";
+            DotNetEnv.Env.Load();
 
-            var clientSecret = "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";
+            var clientId = Environment.GetEnvironmentVariable("CLIENT_ID");
+
+            var clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET");
 
             var credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                 new ClientSecrets
@@ -57,7 +59,10 @@ namespace L03
         {
             var request = (HttpWebRequest)WebRequest.Create("https://www.googleapis.com/drive/v3/files?q='root'%20in%20parents");
 
+            request.Credentials = CredentialCache.DefaultCredentials;
             request.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + _token);
+            request.PreAuthenticate = true;
+            request.UseDefaultCredentials = true;
 
             using (var response = request.GetResponse())
             {
