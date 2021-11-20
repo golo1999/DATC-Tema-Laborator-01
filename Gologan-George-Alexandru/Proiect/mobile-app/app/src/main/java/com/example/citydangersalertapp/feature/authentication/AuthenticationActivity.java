@@ -19,10 +19,10 @@ public class AuthenticationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setVariables();
         setLayoutVariables();
-        setFragment(new LogInFragment());
+        setFragment(new LogInFragment(viewModel));
     }
 
-    private void setFragment(Fragment fragment) {
+    public void setFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(binding.mainContainer.getId(), fragment)
